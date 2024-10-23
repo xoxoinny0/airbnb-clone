@@ -10,6 +10,15 @@ const roboto = Roboto({
 
 const theme = createTheme({
   cssVariables: true,
+  breakpoints: {
+    values: {
+      xs: 550,
+      sm: 745,
+      md: 950,
+      lg: 1128,
+      xl: 1640,
+    },
+  },
   palette: {
     mode: "light",
   },
