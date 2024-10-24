@@ -1,12 +1,12 @@
 "use client";
 import { createTheme } from "@mui/material/styles";
-import { Roboto } from "next/font/google";
+// import { Roboto } from "next/font/google";
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
+// const roboto = Roboto({
+//   weight: ["300", "400", "500", "700"],
+//   subsets: ["latin"],
+//   display: "swap",
+// });
 
 const theme = createTheme({
   cssVariables: true,
@@ -26,13 +26,18 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily:
+      "Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
   },
   components: {
     MuiCssBaseline: {
       // Global CSS는 여기에서
       styleOverrides: {
-        body: {},
+        body: {
+          fontFamily:
+            " Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
+          fontSize: 14,
+        },
       },
     },
     MuiAlert: {

@@ -15,11 +15,13 @@
     "@mui/icons-material": "^6.1.4",
     "@mui/material": "^6.1.4",
     "@mui/material-nextjs": "^6.1.5",
+    "@types/uuid": "^10.0.0",
     "next": "15.0.0",
     "react": "19.0.0-rc-65a56d0e-20241020",
     "react-device-detect": "^2.2.3",
     "react-dom": "19.0.0-rc-65a56d0e-20241020",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
@@ -28,6 +30,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "15.0.0",
+    "sass": "^1.80.4",
     "typescript": "^5"
   }
 }

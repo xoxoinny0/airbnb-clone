@@ -1,0 +1,62 @@
+$font-path: "https://a0.muscache.com/airbnb/static/airbnb-dls-web/build/fonts/cereal-variable/";
+$woff2-format: "woff2 supports variations";
+$woff2-variations-format: "woff2-variations";
+$font-family: "Airbnb Cereal VF";
+
+@mixin font-face($file, $style: normal, $unicode-range: null) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    src: url("#{$font-path}#{$file}") format($woff2-format),
+      url("#{$font-path}#{$file}") format($woff2-variations-format);
+    font-display: swap;
+    @if $unicode-range {
+      unicode-range: $unicode-range;
+    }
+  }
+}
+
+@include font-face(
+  "AirbnbCerealVF_W_Wght.2d9d32865ef1262644c455b3ead871e9.woff2",
+  normal,
+  "U+0000-03FF, U+0500-058F, U+0700-074F, U+0780-FAFF, U+FE00-FE6F, U+FF00-EFFFF, U+FFFFE-10FFFF"
+);
+@include font-face(
+  "AirbnbCerealVF_Italics_W_Wght.4d5968bfe066c741d708adc61baed262.woff2",
+  italic,
+  "U+0000-03FF, U+0500-058F, U+0700-074F, U+0780-FAFF, U+FE00-FE6F, U+FF00-EFFFF, U+FFFFE-10FFFF"
+);
+@include font-face(
+  "AirbnbCerealVF_Arabic_W_Wght.d9f154d65b7b534fa988aba51062c8df.woff2",
+  normal,
+  "U+0600-06FF, U+0750-077F"
+);
+@include font-face(
+  "AirbnbCerealVF_Cyril_W_Wght.26f0964acf4eb88cb3589d38a3182964.woff2",
+  normal,
+  "U+0400-04FF"
+);
+@include font-face(
+  "AirbnbCerealVF_Hebrew_W_Wght.33e5e2c8babc146eff37ebcaa12cb8bb.woff2",
+  normal,
+  "U+0590-05FF, U+FB00-FB4F"
+);
+@include font-face(
+  "AirbnbCerealVF_W_Wght.2d9d32865ef1262644c455b3ead871e9.woff2",
+  normal
+);
+@include font-face(
+  "AirbnbCerealVF_Deva_W_Wght.11994dc426c38d93ebc5f3cc27490d30.woff2",
+  normal,
+  "U+0900-097F"
+);
+@include font-face(
+  "AirbnbCerealVF_ThaiLp_W_Wght.61a8da9355421c30286deb6d36aa3fb0.woff2",
+  normal,
+  "U+0E00-0E7F"
+);
+@include font-face(
+  "AirbnbCerealVF_Greek_W_Wght.7f56bb1b50c0f29a313a57f55e55be5f.woff2",
+  normal,
+  "U+0370-03FF"
+);
