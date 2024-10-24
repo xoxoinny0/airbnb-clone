@@ -1,7 +1,7 @@
 "use client";
-import { Box, Card, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
-import { CardSwiper } from "./HostingCard.style";
+import * as S from "./HostingCard.style";
 
 type HostingCardProps = {
   slideImages: [string, string, string, string, string];
@@ -15,8 +15,8 @@ export default function HostingCard({
   slideImages,
 }: HostingCardProps) {
   return (
-    <Card>
-      <CardSwiper
+    <S.CardContainer>
+      <S.CardSwiper
         spaceBetween={50}
         slidesPerView={1}
         onSlideChange={() => console.log("slide change")}
@@ -47,17 +47,17 @@ export default function HostingCard({
             </Box>
           </SwiperSlide>
         ))}
-      </CardSwiper>
+      </S.CardSwiper>
       <Box>
         <Box>{title}</Box>
         <Box>호스트: {hostname}</Box>
         <Box>
           <Box component="b" sx={{ fontWeight: 500 }}>
-            ₩0
-          </Box>{" "}
+            ₩0&nbsp;
+          </Box>
           / 인
         </Box>
       </Box>
-    </Card>
+    </S.CardContainer>
   );
 }
