@@ -1,4 +1,5 @@
 "use client";
+import { Padding } from "@mui/icons-material";
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -21,16 +22,27 @@ const theme = createTheme({
   typography: {
     fontFamily:
       "Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
+    fontSize: 14,
+    h1: {
+      fontSize: "20px",
+    },
+    h2: {
+      fontSize: "18px",
+    },
+    h3: {
+      fontSize: "16px",
+    },
   },
   components: {
     MuiCssBaseline: {
       // Global CSS는 여기에서
       styleOverrides: {
         body: {
-          fontFamily:
-            " Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
-          fontSize: 14,
           overflowX: "hidden",
+        },
+        ["ul, ol, li"]: {
+          listStyle: "none",
+          padding: 0,
         },
       },
     },

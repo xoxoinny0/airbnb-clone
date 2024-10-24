@@ -7,6 +7,7 @@ import theme from "./_lib/theme";
 import "@/styles/swiper.scss";
 import "@/styles/pagination.scss";
 import "@/styles/font.scss";
+import Footer from "./_component/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,6 +33,7 @@ export default function RootLayout({
             <CssBaseline />
             <Header />
             {children}
+            <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
