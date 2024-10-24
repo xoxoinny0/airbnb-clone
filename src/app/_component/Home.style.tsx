@@ -22,3 +22,22 @@ export const Grid = styled("div")(({ theme }) => ({
   rowGap: "40px",
   columnGap: "24px",
 }));
+
+export const SearchTabBtn = styled("button")(({ theme }) => ({
+  cursor: "pointer",
+  border: "none",
+  backgroundColor: "transparent",
+  fontSize: 16,
+  width: "64px",
+  height: "44px",
+  color: "#6A6A6A",
+  ":hover": {
+    color: "#000",
+  },
+  "mui-selected": {
+    color: "red",
+  },
+  ".active": {
+    color: "red",
+  },
+}));
