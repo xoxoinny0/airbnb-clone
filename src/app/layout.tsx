@@ -4,10 +4,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./_lib/theme";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "@/styles/swiper.scss";
+import "@/styles/pagination.scss";
 import "@/styles/font.scss";
 
 export const metadata: Metadata = {
