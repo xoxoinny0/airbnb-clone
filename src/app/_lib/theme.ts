@@ -21,6 +21,9 @@ const theme = createTheme({
   },
   palette: {
     mode: "light",
+    primary: {
+      main: "#FF385C",
+    },
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
