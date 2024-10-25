@@ -1,15 +1,16 @@
 "use client";
 import { Box } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import * as S from "./HostingCard.style";
 import { useState } from "react";
 import Swiper from "swiper";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Pagination from "./Pagination";
 
 type HostingCardProps = {
-  slideImages: [string, string, string, string, string];
+  slideImages: string[];
   hostname: string;
   title: string;
 };
@@ -37,13 +38,16 @@ export default function HostingCard({
   return (
     <S.CardContainer>
       <S.CardSwiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation]}
         spaceBetween={0}
         slidesPerView={1}
         // loop={true}
         onActiveIndexChange={(swiper) => setSwiperIdx(swiper.activeIndex)}
         // onSlideChange={(swiper) => setSwiperIdx(swiper.activeIndex)}
         onSwiper={setSwiperInstance}
+        // pagination={{
+        //   dynamicBullets: true,
+        // }}
       >
         {slideImages.map((slideImage, i) => (
           <SwiperSlide key={`hostname_img_${i}`}>
@@ -70,6 +74,7 @@ export default function HostingCard({
             </Box>
           </SwiperSlide>
         ))}
+        <Pagination index={swiperIdx} imageLength={slideImages.length} />
         {swiperIdx !== 0 && (
           <S.SliderButton direction="prev" onClick={prevSlide}>
             <ChevronLeftIcon htmlColor="#000000" />
